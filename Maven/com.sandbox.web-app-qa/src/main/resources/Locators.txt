@@ -1,0 +1,25 @@
+username:username
+email://input[@id='email']
+password://input[@id='password']
+confirmpass://input[@id='confirm']
+selectbox://select[@id='aboutyou']
+submit://input[@id='submit-button']
+formname:form-group
+logoutid:logout
+loggedusername:v-username
+userdata://div[@id='account-avatar']
+loginbtnxpath://input[@class='btn blue']
+loginerror://p[contains(text(),'Incorrect username or password.')]
+usernamelogin://input[@placeholder='Username']
+products_link_text:Products
+add_new_link_text:Add New Product
+prod_name_xpath://input[@name='name']
+prod_id_xpath://input[@name='vendor_product_id']
+prod_description_xpath://input[@name='description']
+prod_price_xpath://input[@name='price']
+save_changes_xpath://input[@name='submit']
+update_successfull_xpath://span[@class='form_valid large']
+view_button_xpath://a[contains(text(),'View')]
+edit_button_xpath://a[contains(text(),'Edit')]
+save_edited_prod_changes://input[@class='context-btn save']
+successfully_edited_product_message://span[@class='form_valid']

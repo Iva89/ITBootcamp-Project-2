@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="7" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-16T15:32:43 CEST" name="TestSuite" finished-at="2020-05-16T15:34:31 CEST" duration-ms="108141">
+    <groups>
+    </groups>
+    <test started-at="2020-05-16T15:32:43 CEST" name="LogInTest" finished-at="2020-05-16T15:32:55 CEST" duration-ms="11337">
+      <class name="registration_login_test.LogInTest">
+        <test-method signature="logIn1_WithoutReg()[pri:0, instance:registration_login_test.LogInTest@568bf312]" started-at="2020-05-16T15:32:43 CEST" name="logIn1_WithoutReg" finished-at="2020-05-16T15:32:46 CEST" duration-ms="2162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logIn1_WithoutReg -->
+        <test-method signature="logIn2_RegisteredUser()[pri:0, instance:registration_login_test.LogInTest@568bf312]" started-at="2020-05-16T15:32:46 CEST" name="logIn2_RegisteredUser" finished-at="2020-05-16T15:32:55 CEST" duration-ms="9081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logIn2_RegisteredUser -->
+      </class> <!-- registration_login_test.LogInTest -->
+    </test> <!-- LogInTest -->
+    <test started-at="2020-05-16T15:32:55 CEST" name="Add_and_Edit_ProductTest" finished-at="2020-05-16T15:34:31 CEST" duration-ms="96716">
+      <class name="products_test.AddProductTest">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:products_test.AddProductTest@161b062a]" started-at="2020-05-16T15:32:29 CEST" name="BeforeSuite" finished-at="2020-05-16T15:32:43 CEST" duration-ms="14456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method signature="uploadProduct()[pri:0, instance:products_test.AddProductTest@161b062a]" started-at="2020-05-16T15:32:55 CEST" name="uploadProduct" finished-at="2020-05-16T15:33:09 CEST" duration-ms="14336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadProduct -->
+        <test-method signature="uploadProductsFromExcel()[pri:0, instance:products_test.AddProductTest@161b062a]" started-at="2020-05-16T15:33:09 CEST" name="uploadProductsFromExcel" finished-at="2020-05-16T15:34:08 CEST" duration-ms="58410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadProductsFromExcel -->
+        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:products_test.AddProductTest@161b062a]" started-at="2020-05-16T15:34:32 CEST" name="AfterSuite" finished-at="2020-05-16T15:34:34 CEST" duration-ms="2235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- products_test.AddProductTest -->
+      <class name="products_test.EditProductTest">
+        <test-method signature="increaseProductPriceTest()[pri:0, instance:products_test.EditProductTest@17c1bced]" started-at="2020-05-16T15:34:08 CEST" name="increaseProductPriceTest" finished-at="2020-05-16T15:34:31 CEST" duration-ms="23947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- increaseProductPriceTest -->
+      </class> <!-- products_test.EditProductTest -->
+    </test> <!-- Add_and_Edit_ProductTest -->
+  </suite> <!-- TestSuite -->
+</testng-results>

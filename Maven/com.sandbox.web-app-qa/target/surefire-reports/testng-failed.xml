@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="1" name="LogInTest(failed)" verbose="0">
+    <classes>
+      <class name="registration_login_test.LogInTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="logIn1_WithoutReg"/>
+          <include name="logIn2_RegisteredUser"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeTest"/>
+        </methods>
+      </class> <!-- registration_login_test.LogInTest -->
+    </classes>
+  </test> <!-- LogInTest(failed) -->
+  <test thread-count="1" name="Add_and_Edit_ProductTest(failed)" verbose="0">
+    <classes>
+      <class name="products_test.EditProductTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="increaseProductPriceTest"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeTest"/>
+        </methods>
+      </class> <!-- products_test.EditProductTest -->
+      <class name="products_test.AddProductTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="uploadProduct"/>
+          <include name="uploadProductsFromExcel"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeTest"/>
+        </methods>
+      </class> <!-- products_test.AddProductTest -->
+    </classes>
+  </test> <!-- Add_and_Edit_ProductTest(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
