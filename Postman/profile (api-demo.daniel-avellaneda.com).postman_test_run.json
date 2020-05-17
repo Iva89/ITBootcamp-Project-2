@@ -1,0 +1,84 @@
+{
+	"id": "0474d9aa-e023-4889-b226-f94377bd79f5",
+	"name": "profile (api-demo.daniel-avellaneda.com)",
+	"timestamp": "2020-05-17T21:23:39.656Z",
+	"collection_id": "4997e40d-ef44-4c46-afa9-15943572e1b1",
+	"folder_id": 0,
+	"environment_id": "eda2f3b8-ca75-40cf-82e5-05ba35cb7612",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "aa0758f7-5284-4cb4-ba93-2289f09b938f",
+			"name": "profile data",
+			"url": "https://api-demo.daniel-avellaneda.com/profile",
+			"time": 156,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				156
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f37860e4-1853-4cf4-97ec-9f9c06b48b39",
+			"name": "modify profile info",
+			"url": "https://api-demo.daniel-avellaneda.com/profile",
+			"time": 153,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				153
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "303a7869-cf28-4fbb-ac8a-293966e568db",
+			"name": "change password",
+			"url": "https://api-demo.daniel-avellaneda.com/profile/changePassword",
+			"time": 167,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				167
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 476,
+	"collection": {
+		"requests": [
+			{
+				"id": "aa0758f7-5284-4cb4-ba93-2289f09b938f",
+				"method": "GET"
+			},
+			{
+				"id": "f37860e4-1853-4cf4-97ec-9f9c06b48b39",
+				"method": "PATCH"
+			},
+			{
+				"id": "303a7869-cf28-4fbb-ac8a-293966e568db",
+				"method": "POST"
+			}
+		]
+	}
+}

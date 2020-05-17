@@ -1,0 +1,150 @@
+{
+	"id": "3ae6890e-a7f1-456c-b502-694926e2aeab",
+	"name": "users (api-demo.daniel-avellaneda.com)",
+	"timestamp": "2020-05-17T21:24:58.233Z",
+	"collection_id": "e19bd1a5-1cd6-4b5e-9f47-d8d7943c9893",
+	"folder_id": 0,
+	"environment_id": "eda2f3b8-ca75-40cf-82e5-05ba35cb7612",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "0774bc09-1d8d-4e9f-bba5-c962a478b463",
+			"name": "admin token (login admin)",
+			"url": "https://api-demo.daniel-avellaneda.com/login",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				169
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b1951727-a7d7-4faa-817b-492df420ac2d",
+			"name": "list of users",
+			"url": "https://api-demo.daniel-avellaneda.com/users",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				169
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fd49b8d6-775e-4075-8af9-78aec4e750da",
+			"name": "admin creates new user",
+			"url": "https://api-demo.daniel-avellaneda.com/users",
+			"time": 200,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				200
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1ea86e28-c488-48f9-95fd-a5a910ebc695",
+			"name": "admin gets user's data",
+			"url": "https://api-demo.daniel-avellaneda.com/users/5ec1aba978361d02e3c9d1bb",
+			"time": 149,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				149
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1b003ef2-05f1-4ab6-b250-534d1cbe6668",
+			"name": "admin edits user's data",
+			"url": "https://api-demo.daniel-avellaneda.com/users/5ec1aba978361d02e3c9d1bb",
+			"time": 237,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				237
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c9992f0d-30fd-4776-9e76-a65a3f52e3b1",
+			"name": "admin deletes user",
+			"url": "https://api-demo.daniel-avellaneda.com/users/5ec1aba978361d02e3c9d1bb",
+			"time": 153,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				153
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1077,
+	"collection": {
+		"requests": [
+			{
+				"id": "0774bc09-1d8d-4e9f-bba5-c962a478b463",
+				"method": "POST"
+			},
+			{
+				"id": "b1951727-a7d7-4faa-817b-492df420ac2d",
+				"method": "GET"
+			},
+			{
+				"id": "fd49b8d6-775e-4075-8af9-78aec4e750da",
+				"method": "POST"
+			},
+			{
+				"id": "1ea86e28-c488-48f9-95fd-a5a910ebc695",
+				"method": "GET"
+			},
+			{
+				"id": "1b003ef2-05f1-4ab6-b250-534d1cbe6668",
+				"method": "PATCH"
+			},
+			{
+				"id": "c9992f0d-30fd-4776-9e76-a65a3f52e3b1",
+				"method": "DELETE"
+			}
+		]
+	}
+}

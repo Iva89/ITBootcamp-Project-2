@@ -1,0 +1,267 @@
+{
+	"id": "6a912d68-ba97-4cd4-b954-65586c859c18",
+	"name": "auth (api-demo.daniel-avellaneda.com)",
+	"timestamp": "2020-05-17T21:22:18.809Z",
+	"collection_id": "5db5e756-dd3e-4d51-8795-2ef782b1a904",
+	"folder_id": 0,
+	"environment_id": "eda2f3b8-ca75-40cf-82e5-05ba35cb7612",
+	"totalPass": 17,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "10a86c7b-9975-487b-addf-19c99d3b3d32",
+			"name": "register user",
+			"url": "https://api-demo.daniel-avellaneda.com/register",
+			"time": 159,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"body is object": true,
+				"body has token and name property": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body has token and name property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"body is object": true,
+					"body has token and name property": true
+				}
+			]
+		},
+		{
+			"id": "96688961-800f-4ac2-b390-dc2765f594c1",
+			"name": "profile data",
+			"url": "https://api-demo.daniel-avellaneda.com/profile",
+			"time": 159,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				159
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "966e546d-b321-4563-89a6-c7a2df12412f",
+			"name": "verify user account",
+			"url": "https://api-demo.daniel-avellaneda.com/verify",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"body is object": true,
+				"body has email and verified property": true,
+				"verified is true": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body has email and verified property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verified is true": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"body is object": true,
+					"body has email and verified property": true,
+					"verified is true": true
+				}
+			]
+		},
+		{
+			"id": "8c9ac014-1946-4da5-87ce-56b707c02ee5",
+			"name": "login",
+			"url": "https://api-demo.daniel-avellaneda.com/login",
+			"time": 196,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"body is object": true,
+				"body has token property": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body has token property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				196
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"body is object": true,
+					"body has token property": true
+				}
+			]
+		},
+		{
+			"id": "4f47ebb4-a202-4f17-8f3b-cbe6680ce24a",
+			"name": "forgot password, get new id",
+			"url": "https://api-demo.daniel-avellaneda.com/forgot",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"body is object": true,
+				"body has msg property": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body has msg property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"body is object": true,
+					"body has msg property": true
+				}
+			]
+		},
+		{
+			"id": "7841e79e-0c41-4b42-a6de-3784cb231a75",
+			"name": "cannot register - mail already exists",
+			"url": "https://api-demo.daniel-avellaneda.com/register",
+			"time": 162,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {
+				"Email already exists": true,
+				"body is object": true,
+				"body has errors property": true,
+				"errors have msg property and contains text EMAIL_ALREADY_EXISTS": true
+			},
+			"testPassFailCounts": {
+				"Email already exists": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body has errors property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"errors have msg property and contains text EMAIL_ALREADY_EXISTS": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"Email already exists": true,
+					"body is object": true,
+					"body has errors property": true,
+					"errors have msg property and contains text EMAIL_ALREADY_EXISTS": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 995,
+	"collection": {
+		"requests": [
+			{
+				"id": "10a86c7b-9975-487b-addf-19c99d3b3d32",
+				"method": "POST"
+			},
+			{
+				"id": "96688961-800f-4ac2-b390-dc2765f594c1",
+				"method": "GET"
+			},
+			{
+				"id": "966e546d-b321-4563-89a6-c7a2df12412f",
+				"method": "POST"
+			},
+			{
+				"id": "8c9ac014-1946-4da5-87ce-56b707c02ee5",
+				"method": "POST"
+			},
+			{
+				"id": "4f47ebb4-a202-4f17-8f3b-cbe6680ce24a",
+				"method": "POST"
+			},
+			{
+				"id": "7841e79e-0c41-4b42-a6de-3784cb231a75",
+				"method": "POST"
+			}
+		]
+	}
+}

@@ -1,0 +1,292 @@
+{
+	"id": "0a5d606d-4c27-4568-8aca-b89ee714007c",
+	"name": "cities (api-demo.daniel-avellaneda.com)",
+	"timestamp": "2020-05-17T21:23:07.204Z",
+	"collection_id": "3aa004aa-bb73-4ded-a165-c1b04acf15e4",
+	"folder_id": 0,
+	"environment_id": "eda2f3b8-ca75-40cf-82e5-05ba35cb7612",
+	"totalPass": 17,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "255a0d52-954d-4eb3-8307-b2901d001665",
+			"name": "all cities",
+			"url": "https://api-demo.daniel-avellaneda.com/cities",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"body is object": true,
+				"property docs should be an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"property docs should be an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"body is object": true,
+					"property docs should be an array": true
+				}
+			]
+		},
+		{
+			"id": "294b7bd3-d7cf-4339-bb56-d8fef74f37ab",
+			"name": "search for specific city",
+			"url": "https://api-demo.daniel-avellaneda.com/cities?filter=Oak&fields=name",
+			"time": 400,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"body is object": true,
+				"property docs should be an array": true,
+				"property docs[0] has property name and its value is Oakland": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"property docs should be an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"property docs[0] has property name and its value is Oakland": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				400
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"body is object": true,
+					"property docs should be an array": true,
+					"property docs[0] has property name and its value is Oakland": true
+				}
+			]
+		},
+		{
+			"id": "88d3ffe0-1364-456a-8686-52535a524840",
+			"name": "adds new city",
+			"url": "https://api-demo.daniel-avellaneda.com/cities",
+			"time": 159,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"body is object": true,
+				"body has name and id properties": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body has name and id properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"body is object": true,
+					"body has name and id properties": true
+				}
+			]
+		},
+		{
+			"id": "09c4387c-9bb4-4b8a-8bce-9e93b948b37a",
+			"name": "get city by id",
+			"url": "https://api-demo.daniel-avellaneda.com/cities/5ec1a5d56fb5240370334cba",
+			"time": 183,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"body is object": true,
+				"body has name and id properties, id equals to id of city from \"search for specific city\" request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body has name and id properties, id equals to id of city from \"search for specific city\" request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				183
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"body is object": true,
+					"body has name and id properties, id equals to id of city from \"search for specific city\" request": true
+				}
+			]
+		},
+		{
+			"id": "9bfb11d6-563d-4285-9e89-52adbd2eeb0f",
+			"name": "edit city ",
+			"url": "https://api-demo.daniel-avellaneda.com/cities/5ec1a5d56fb5240370334cba",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"body is object": true,
+				"body has name and id property, equals to id of city from \"search for specific city\" request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body is object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body has name and id property, equals to id of city from \"search for specific city\" request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"body is object": true,
+					"body has name and id property, equals to id of city from \"search for specific city\" request": true
+				}
+			]
+		},
+		{
+			"id": "31609d06-7cba-498a-94bb-531dae991411",
+			"name": "delete city by id",
+			"url": "https://api-demo.daniel-avellaneda.com/cities/5ec1a5d56fb5240370334cba",
+			"time": 153,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				153
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "12e01fe8-65da-41c8-8fb7-7d2de462cecc",
+			"name": "cannot get cities (no token was sent)",
+			"url": "https://api-demo.daniel-avellaneda.com/cities",
+			"time": 149,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				149
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1362,
+	"collection": {
+		"requests": [
+			{
+				"id": "255a0d52-954d-4eb3-8307-b2901d001665",
+				"method": "GET"
+			},
+			{
+				"id": "294b7bd3-d7cf-4339-bb56-d8fef74f37ab",
+				"method": "GET"
+			},
+			{
+				"id": "88d3ffe0-1364-456a-8686-52535a524840",
+				"method": "POST"
+			},
+			{
+				"id": "09c4387c-9bb4-4b8a-8bce-9e93b948b37a",
+				"method": "GET"
+			},
+			{
+				"id": "9bfb11d6-563d-4285-9e89-52adbd2eeb0f",
+				"method": "PATCH"
+			},
+			{
+				"id": "31609d06-7cba-498a-94bb-531dae991411",
+				"method": "DELETE"
+			},
+			{
+				"id": "12e01fe8-65da-41c8-8fb7-7d2de462cecc",
+				"method": "GET"
+			}
+		]
+	}
+}
