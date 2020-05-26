@@ -21,21 +21,21 @@ public class SignUpPageTest extends BeforeAfterAnnotations{
 	public void registration2_FormOneUser() {
 		 SignUpPage.clickSignUp(wd);
 		 WebDriverWait wait = new WebDriverWait(wd, 10);
-		 wait.until(ExpectedConditions.elementToBeClickable(By.xpath(SignUpPage.USERNAME)));
+		 wait.until(ExpectedConditions.elementToBeClickable(By.xpath(SignUpPage.getUsernameXpath())));
 		 SignUpPage.inputUserName(wd, "gugigili");
 		 SignUpPage.inputEMail(wd, "gugigi@gmail.com");
 		 SignUpPage.inputPassword(wd, "Gigi1234");
 		 SignUpPage.inputConfirmPassword(wd, "Gigi1234");
 		 SignUpPage.selectOption5(wd);
 		 SignUpPage.clickSubmit(wd);
-		 Assert.assertEquals(wd.getCurrentUrl(), HomePage.URL_HOME);
+		 Assert.assertEquals(wd.getCurrentUrl(), HomePage.getHomeUrl());
 	}
 
 	@Test
 	public void registration1_WithoutOneField() {
 		SignUpPage.clickSignUp(wd);
 
-		List<WebElement> regElements = wd.findElements(By.className("form-group"));
+		List<WebElement> regElements = wd.findElements(By.className(SignUpPage.getFormName()));
 		for (int i = 2; i < regElements.size(); i++) {
 			SignUpPage.inputUserName(wd, "rugili");
 			SignUpPage.inputEMail(wd, "rigigi@gmail.com");
@@ -48,13 +48,13 @@ public class SignUpPageTest extends BeforeAfterAnnotations{
 					.sendKeys(Keys.BACK_SPACE).build().perform();
 
 			SignUpPage.clickSubmit(wd);
-			wd.findElement(By.xpath(SignUpPage.USERNAME)).clear();
-			wd.findElement(By.xpath(SignUpPage.EMAIL)).clear();
-			wd.findElement(By.xpath(SignUpPage.PASS)).clear();
-			wd.findElement(By.xpath(SignUpPage.CONFIRM_PASS)).clear();
+			wd.findElement(By.xpath(SignUpPage.getUsernameXpath())).clear();
+			wd.findElement(By.xpath(SignUpPage.getEmailXpath())).clear();
+			wd.findElement(By.xpath(SignUpPage.getPasswordXpath())).clear();
+			wd.findElement(By.xpath(SignUpPage.getConfirmPassXpath())).clear();
 			SignUpPage.selectOption0(wd);
 
-			Assert.assertEquals(wd.getCurrentUrl(), SignUpPage.URL_SIGNUP);
+			Assert.assertEquals(wd.getCurrentUrl(), SignUpPage.getSignUpUrl());
 			// if it stays on the same page test is passed
 		}
 	}

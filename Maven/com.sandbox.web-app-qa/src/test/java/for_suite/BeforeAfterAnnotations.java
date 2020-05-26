@@ -21,22 +21,9 @@ public class BeforeAfterAnnotations {
 		ReadTextFile.readMap(mapa);	
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		wd = new ChromeDriver();
-		wd.get(SignUpPage.URL_START);
+		wd.get(SignUpPage.getStartUrl());
 		wd.manage().window().maximize();
 	}
-	
-	
-	//@BeforeTest
-	//public void BeforeTest() {
-		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		//wd = new ChromeDriver();
-	//}
-
-	//@BeforeClass
-	//public void BeforeMethod() {
-		//wd.get(SignUpPage.URL_START);
-		//wd.manage().window().maximize();
-	//}
 	
 	@AfterSuite
 	public void AfterSuite() {

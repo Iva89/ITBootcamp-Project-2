@@ -8,9 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class EditProduct {
-	public static String EDIT_BUTTON;
-	public static String SAVE_PROD_CHANGES;
-	public static String SUCCESSFULLY_EDITED;
+	private static String EDIT_BUTTON;
+	private static String SAVE_PROD_CHANGES;
+	private static String SUCCESSFULLY_EDITED;
 	
 	public static void setEditButton(String editButtonXpath) {
 		EDIT_BUTTON = editButtonXpath;
@@ -27,6 +27,10 @@ public class EditProduct {
 	}
 	public static void clickSaveEditedChanges(WebDriver wd) {
 		wd.findElement(By.xpath(SAVE_PROD_CHANGES)).click();
+	}
+	
+	public static String getSuccessfullyEditedXpath(){
+		return SUCCESSFULLY_EDITED;
 	}
 	
 	public static ArrayList<Double> increaseProductPrice(WebDriver wd) {

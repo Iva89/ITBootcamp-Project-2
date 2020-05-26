@@ -7,12 +7,12 @@ import org.openqa.selenium.interactions.Actions;
 
 public class HomePage {
 	
-	public static String LOG_OUT;
-	public static String LOGGED_USERNAME;
-	public static String USER_DATA;
-	public static String PRODUCTS;
+	private static String LOG_OUT;
+	private static String LOGGED_USERNAME;
+	private static String USER_DATA;
+	private static String PRODUCTS;
 	
-	public static final String URL_HOME = "https://sandbox.2checkout.com/sandbox/home/dashboard";
+	private static final String URL_HOME = "https://sandbox.2checkout.com/sandbox/home/dashboard";
 	
 	public static void setLogOut(String logout) {
 		LOG_OUT = logout;
@@ -48,5 +48,17 @@ public class HomePage {
 	
 	public static void navigateToProductsPage(WebDriver wd) {
 		wd.findElement(By.linkText(PRODUCTS)).click();
+	}
+	
+	public static String getHomeUrl() {
+		return URL_HOME;
+	}
+	
+	public static String getUserData() {
+		return USER_DATA;
+	}
+	
+	public static String getLoggedUsenameId() {
+		return LOGGED_USERNAME;
 	}
 }

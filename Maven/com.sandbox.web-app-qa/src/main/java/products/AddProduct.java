@@ -5,14 +5,14 @@ import org.openqa.selenium.WebDriver;
 
 public class AddProduct {
 
-	public static String ADD_NEW;
-	public static String PROD_NAME;
-	public static String PROD_ID;
-	public static String PROD_DESC;
-	public static String PROD_PRICE;
-	public static String SAVE_CHANGES;
-	public static String UPDATE_SUCCESSFUL;
-	public static String VIEW_BUTTON;
+	private static String ADD_NEW;
+	private static String PROD_NAME;
+	private static String PROD_ID;
+	private static String PROD_DESC;
+	private static String PROD_PRICE;
+	private static String SAVE_CHANGES;
+	private static String UPDATE_SUCCESSFUL;
+	private static String VIEW_BUTTON;
 	
 	
 	public static void setAddNew(String addNewLinkText) {
@@ -61,6 +61,10 @@ public class AddProduct {
 	}
 	public static void clickViewButton(WebDriver wd) {
 		wd.findElement(By.xpath(VIEW_BUTTON)).click();
+	}
+	
+	public static String getUpdateSuccessful() {
+		return UPDATE_SUCCESSFUL;
 	}
 	
 }

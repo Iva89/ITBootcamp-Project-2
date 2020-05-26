@@ -29,7 +29,7 @@ public class AddProductTest extends BeforeAfterAnnotations{
 		AddProduct.inputProdDescription(wd, "about something");
 		AddProduct.inputPrice(wd, "100.00");
 		AddProduct.clickSaveChanges(wd);
-		Assert.assertTrue(wd.findElement(By.xpath(AddProduct.UPDATE_SUCCESSFUL)).isDisplayed());
+		Assert.assertTrue(wd.findElement(By.xpath(AddProduct.getUpdateSuccessful())).isDisplayed());
 		//if "update successful" message is displayed product is added
 	}
 
@@ -46,7 +46,7 @@ public class AddProductTest extends BeforeAfterAnnotations{
 			AddProduct.inputProdDescription(wd, ProductsExcel.getProdDescription(i));
 			AddProduct.inputPrice(wd, ProductsExcel.getProdPrice(i));
 			AddProduct.clickSaveChanges(wd);
-			Assert.assertTrue(wd.findElement(By.xpath(AddProduct.UPDATE_SUCCESSFUL)).isDisplayed());
+			Assert.assertTrue(wd.findElement(By.xpath(AddProduct.getUpdateSuccessful())).isDisplayed());
 			//if "update successful" message is displayed product is added
 			AddProduct.clickViewButton(wd);
 		}

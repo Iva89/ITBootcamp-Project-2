@@ -22,9 +22,9 @@ public class LogInTest extends BeforeAfterAnnotations{
 		LogIn.inputUserName(wd, "dididi");
 		LogIn.inputPass(wd, "Dididi111");
 		WebDriverWait wait = new WebDriverWait(wd, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(LogIn.LOGIN)));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(LogIn.getLoginXpath())));
 		LogIn.clickLogIn(wd);
-		Assert.assertTrue(wd.findElement(By.xpath(LogIn.LOGIN_ERROR)).isDisplayed());
+		Assert.assertTrue(wd.findElement(By.xpath(LogIn.getLogInErrorXpath())).isDisplayed());
 		//test will pass if error message is displayed
 	}
 
@@ -32,11 +32,11 @@ public class LogInTest extends BeforeAfterAnnotations{
 	public void logIn2_RegisteredUser() {
 
 		WebDriverWait wait = new WebDriverWait(wd, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(LogIn.USERNAME_LOGIN)));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(LogIn.getUserNameLoginXpath())));
 		LogIn.inputUserName(wd, "jjosling1");
 		LogIn.inputPass(wd, "QNo54LQb4wv");
 		LogIn.clickLogIn(wd);
-		Assert.assertEquals(wd.getCurrentUrl(), HomePage.URL_HOME);
+		Assert.assertEquals(wd.getCurrentUrl(), HomePage.getHomeUrl());
 		//if user is logged in, website will navigate to home page
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("account-avatar")));

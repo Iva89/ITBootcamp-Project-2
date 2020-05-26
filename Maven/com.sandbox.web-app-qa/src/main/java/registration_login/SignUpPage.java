@@ -6,16 +6,16 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SignUpPage {
 
-	public static String USERNAME;
-	public static String EMAIL;
-	public static String PASS;
-	public static String CONFIRM_PASS;
-	public static String SELECTBOX;
-	public static String SUBMIT;
-	public static String FORM_NAME;
+	private static String USERNAME;
+	private static String EMAIL;
+	private static String PASS;
+	private static String CONFIRM_PASS;
+	private static String SELECTBOX;
+	private static String SUBMIT;
+	private static String FORM_NAME;
 	
-	public static final String URL_START = "https://sandbox.2checkout.com/sandbox/home/dashboard";
-	public static final String URL_SIGNUP ="https://sandbox.2checkout.com/sandbox/signup";
+	private static final String URL_START = "https://sandbox.2checkout.com/sandbox/home/dashboard";
+	private static final String URL_SIGNUP ="https://sandbox.2checkout.com/sandbox/signup";
 	
 	public static void setUserName(String username) {
 		USERNAME = username;
@@ -39,6 +39,33 @@ public class SignUpPage {
 		FORM_NAME = formName;
 	}
 	
+	public static String getStartUrl() {
+		return URL_START;
+	}
+	
+	public static String getSignUpUrl() {
+		return URL_SIGNUP;
+	}
+	
+	public static String getUsernameXpath() {
+		return USERNAME;
+	}
+	
+	public static String getEmailXpath() {
+		return EMAIL;
+	}
+	
+	public static String getPasswordXpath() {
+		return PASS;
+	}
+	
+	public static String getConfirmPassXpath() {
+		return CONFIRM_PASS;
+	}
+	
+	public static String getFormName() {
+		return FORM_NAME;
+	}
 	public static void inputUserName(WebDriver wd, String username) {//inputs username
 		wd.findElement(By.name(USERNAME)).sendKeys(username);
 	}

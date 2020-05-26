@@ -37,7 +37,7 @@ public class Register30Test extends BeforeAfterAnnotations{
 		WebDriverWait wait = new WebDriverWait(wd, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("account-avatar")));
 		HomePage.userData(wd);
-		WebElement e = wd.findElement(By.id(HomePage.LOGGED_USERNAME));
+		WebElement e = wd.findElement(By.id(HomePage.getLoggedUsenameId()));
 		Assert.assertEquals(e.getText(), Register30.getUserName(i));
 		HomePage.clickLogOut(wd);
 		SignUpPage.clickSignUp(wd);

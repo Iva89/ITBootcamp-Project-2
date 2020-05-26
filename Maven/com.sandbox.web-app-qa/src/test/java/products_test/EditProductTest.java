@@ -27,7 +27,7 @@ public class EditProductTest extends BeforeAfterAnnotations{
 		HomePage.navigateToProductsPage(wd);
 		ArrayList<Double> originalPrices = EditProduct.increaseProductPrice(wd);
 		List<WebElement> newPricesWebE = wd.findElements(By.xpath("//*[contains(@name, 'price')]"));
-		if (wd.findElement(By.xpath(EditProduct.SUCCESSFULLY_EDITED)).isDisplayed()) {
+		if (wd.findElement(By.xpath(EditProduct.getSuccessfullyEditedXpath())).isDisplayed()) {
 			SoftAssert sa = new SoftAssert();
 			for (int i = 0; i < originalPrices.size(); i++) {
 				double actual = Double.valueOf(newPricesWebE.get(i).getAttribute("value")).doubleValue();

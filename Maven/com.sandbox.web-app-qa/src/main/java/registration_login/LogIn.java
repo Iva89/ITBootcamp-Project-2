@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class LogIn {
 
-	public static String USERNAME_LOGIN;
-	public static String PASS_LOGIN;
-	public static String LOGIN;
-	public static String LOGIN_ERROR;
+	private static String USERNAME_LOGIN;
+	private static String PASS_LOGIN;
+	private static String LOGIN;
+	private static String LOGIN_ERROR;
 	
 	public static void setUsernameLogin(String usernameLogin) {
 		USERNAME_LOGIN = usernameLogin;
@@ -24,6 +24,19 @@ public class LogIn {
 	public static void setLogInError(String loginError) {
 		LOGIN_ERROR = loginError;
 	}
+	
+	public static String getUserNameLoginXpath() {
+		return USERNAME_LOGIN;
+	}
+	
+	public static String getLogInErrorXpath() {
+		return LOGIN_ERROR;
+	}
+	
+	public static String getLoginXpath() {
+		return LOGIN;
+	}
+	
 	public static void inputUserName(WebDriver wd, String username) {
 		wd.findElement(By.xpath(USERNAME_LOGIN)).sendKeys(username);
 	}
@@ -35,4 +48,5 @@ public class LogIn {
 	 public static void clickLogIn(WebDriver wd) {
 		 wd.findElement(By.xpath(LOGIN)).click();
 	 }
+	 
 }
